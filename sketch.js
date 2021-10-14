@@ -101,8 +101,8 @@ function draw() {
   if (gameState === END) {
     gameOver.x=camera.position.x;
     restart.x=camera.position.x;
-    gameOver.visible = true;
-    restart.visible = true;
+    gameOver.visible = false;
+    restart.visible = false;
     kangaroo.velocityY = 0;
     jungle.velocityX = 0;
     obstaclesGroup.setVelocityXEach(0);
@@ -112,10 +112,6 @@ function draw() {
     
     obstaclesGroup.setLifetimeEach(-1);
     shrubsGroup.setLifetimeEach(-1);
-    
-    if(mousePressedOver(restart)) {
-        reset();
-    }
   }
 
   else if (gameState === WIN) {
