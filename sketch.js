@@ -66,7 +66,8 @@ function setup() {
 
 function draw() {
   background(255);
-  
+  gameOver.visible = false;
+  restart.visible = false;
   kangaroo.x=camera.position.x-270;
    
   if (gameState===PLAY){
